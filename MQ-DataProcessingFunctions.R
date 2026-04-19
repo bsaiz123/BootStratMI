@@ -11,7 +11,6 @@ library("foreach")
 library("parallel")
 
 # Data Prep
-
 FilterContaminants <- function(df) {
   check_cols <- c("Reverse", "Only.identified.by.site", "Potential.contaminant")
   valid_cols <- check_cols[check_cols %in% colnames(df)]
@@ -167,8 +166,3 @@ RawDataPreparation <- function(df,
                                     seed = seed)
   return(df.Imputed)
 }
-
-t.df <- RawDataPreparation(proteinGroups_IMB211,
-                           treatments = c("WW","DD"))
-
-
