@@ -49,7 +49,7 @@ You're now ready to run the pipeline (see **Usage**).
 
 ## Prerequisite R Packages
 The following R packages required for this workflow and their tested versions are:
-### Cran
+### CRAN
 - tibble (v 3.3.0)
 - dplyr (v 1.1.4)
 - tidyr (v 1.3.1)
@@ -60,12 +60,12 @@ The following R packages required for this workflow and their tested versions ar
 - foreach (v 1.5.2)
 ### Base R
 - parallel (v 4.5.2)
-### BioConductor
+### Bioconductor
 - minet (v 3.66.0)
 - qvalue (v 3.21)
 
 ## Input Data Format
-- This work is intended to be used with the ProteinGroups.txt output file generated from MaxQuant LFQ analysis
+- This work is intended to be used with the proteinGroups.txt output file generated from MaxQuant LFQ analysis
 
 ## Usage
 1. Load the pipeline functions
@@ -121,6 +121,8 @@ The following R packages required for this workflow and their tested versions ar
       results <- CategorizeResults(results, qThreshold = 0.05, effectThreshold = 0.01)
      ```
 ### Categorization Output Columns
+- **Protein 1**: The first protein group of the pair used in MI analysis
+- **Protein 2**: The second protein group of the pair used in MI analysis
 - **OBS_MI1**: the observed mutual information from the first experimental group
 - **OBS_MI2**: the observed mutual information from the second experimental group
 - **OBS_Dif**: the observed difference in mutual information between experimental groups
